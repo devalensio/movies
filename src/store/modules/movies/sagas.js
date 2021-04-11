@@ -1,32 +1,58 @@
 import { call, put } from 'redux-saga/effects';
 
 import { Movies } from './constants';
-import {
-  loadingMovies,
-  loadedMovies,
-  errorLoadingMovies,
-} from './actions';
+import * as actions from './actions';
 
 import { coreAPI } from '../../../utils/coreAPI';
 
 function* getMovies(action) {
-  const { data } = action.payload;
+  const { page, title, withPrevious } = action.payload;
 
-  yield put(loadingMovies());
+  yield put(actions.loadingMovies());
 
   try {
     const response = yield call(coreAPI, {
       method: 'GET',
-      path: `/?apikey=faf7e5bb&s=Attack On Titan`,
+      path: `/?apikey=faf7e5bb&s=${title}&page=${page}`,
     });
-    
-    yield put(loadedMovies(response.Search));
+
+    let movies = [];
+
+    if (response.Search) movies = response.Search;
+    if (withPrevious) {
+      yield put(actions.loadedMoviesWithPrevious(movies));
+    } else {
+      yield put(actions.loadedMovies(movies));
+    }
+
+    action.callback && action.callback();
   }
   catch (e) {
-    yield put(errorLoadingMovies());
+    yield put(actions.errorLoadingMovies());
+  }
+}
+
+function* getMovieDetail(action) {
+  const { movieId } = action.payload;
+
+  yield put(actions.loadingMovieDetail());
+
+  try {
+    const response = yield call(coreAPI, {
+      method: 'GET',
+      path: `/?apikey=faf7e5bb&i=${movieId}`,
+    });
+
+    if (response && Object.keys(response).length) {
+      yield put(actions.loadedMovieDetail(response));
+    }
+  }
+  catch (e) {
+    yield put(actions.errorLoadingMovieDetail());
   }
 }
 
 export default [
   [Movies.getMovies, getMovies],
+  [Movies.getMovieDetail, getMovieDetail],
 ];

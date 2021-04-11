@@ -4,8 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import Home from './pages/Home';
-
-import Navbar from './components/Navbar';
+import MovieDetail from './pages/MovieDetail';
 
 import store from './store';
 
@@ -15,13 +14,10 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="app__wrapper">
-        <Navbar />
         <div className="app__wrapper--body">
           <Switch>
-            <Route exact path="/">
-              <Home dispatch={store.dispatch} />
-            </Route>
-            {/* <Route exact path="/movies/:id" component={About} /> */}
+            <Route exact path="/" component={Home} />
+            <Route exact path="/movies/:id" component={MovieDetail} />
           </Switch>
         </div>
       </div>

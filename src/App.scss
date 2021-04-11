@@ -4,6 +4,8 @@
   max-width: 30em;
   margin: 0 auto;
   &--body {
-    margin-top: $space--md;
+    @media (min-width: 768px) {
+      margin-top: $space--md;
+    }
   }
 }

@@ -7,4 +7,10 @@
     @include surface("2", null);
     border-radius: $space--2xs;
   }
+  > p {
+    text-align: center;
+  }
+  > h2 {
+    margin: 0 0 $space--md;
+  }
 }
