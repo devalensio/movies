@@ -1,0 +1,28 @@
+@import "../../styles/tokens/all";
+
+.movie__detail {
+  padding: $space--md;
+  @media (min-width: 768px) {
+    @include surface("2", null);
+    border-radius: $space--2xs;
+  }
+  &--header {
+    display: flex;
+    align-items: center;
+    margin-bottom: $space--md;
+    > h2 {
+      margin: 0;
+      margin-left: $space--md;
+    }
+    .header__icon {
+      cursor: pointer;
+    }
+  }
+  &--body {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+    }
+  }
+}
