@@ -1,0 +1,35 @@
+@import "../../styles/tokens/all";
+
+.search__bar {
+  display: flex;
+  &--main {
+    width: 70%;
+    display: flex;
+    border: 1px solid $color-outline-grey;
+    border-right: unset;
+    padding: $space--xs;
+    border-top-left-radius: $space--2xs;
+    border-bottom-left-radius: $space--2xs;
+    margin-bottom: $space--md;
+    input {
+      width: 100%;
+      margin-left: $space--xs;
+      border: unset;
+      outline: unset;
+    }
+  }
+  button {
+    width: 30%;
+    height: 35px;
+    border-top-right-radius: $space--2xs;
+    border-bottom-right-radius: $space--2xs;
+    border: none;
+    background-color: $brand-primary-color;
+    color: $color--white;
+    outline: unset;
+    cursor: pointer;
+    &:active, &:hover {
+      opacity: 0.8;
+    }
+  }
+}

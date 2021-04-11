@@ -1,0 +1,50 @@
+@import "../../styles/tokens/all";
+
+.movie__wrapper {
+  margin-bottom: $space--md;
+  border-bottom: 1px solid $color-lp-grey;
+  &--header {
+    display: flex;
+    flex-direction: column;
+    img {
+      object-fit: cover;
+      cursor: pointer;
+    }
+    h1 {
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.movie__modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  &--content {
+    background-color: $color--white;
+    margin: auto;
+    padding: $space--md;
+    border: 1px solid $color-grey-70;
+    border-radius: $space--2xs;
+    width: max-content;
+    .content__block {
+      display: flex;
+      justify-content: flex-end;
+      span {
+        margin-bottom: $space--sm;
+        text-align: right;
+        cursor: pointer;
+      }
+    }
+  }
+}
