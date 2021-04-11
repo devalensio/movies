@@ -1,0 +1,10 @@
+@import "../../styles/tokens/all";
+
+.home__wrapper {
+  padding: $space--md;
+  min-height: calc(100vh - 55px - (4 * #{$space--md}));
+  @media (min-width: 768px) {
+    @include surface("2", null);
+    border-radius: $space--2xs;
+  }
+}
