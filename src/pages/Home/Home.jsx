@@ -7,7 +7,7 @@ import SearchBar from '../../components/SearchBar';
 
 import styles from './Home.module.scss';
 
-const Home = ({ dispatch, history, movies, isLoading, isError }) => {
+export const Home = ({ dispatch, history, movies, isLoading, isError }) => {
   const [title, setTitle] = useState('Attack On Titan');
   const [isFetching, setIsFetching] = useState(false);
   const [page, setPage] = useState(1);

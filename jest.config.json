@@ -1,3 +1,35 @@
 {
-  "testRegex": "((\\.|/*.)(spec))\\.js?$"
+  "roots": [
+    "<rootDir>/src/"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/jest.setup.js"
+  ],
+  "testEnvironment": "jsdom",
+  "moduleDirectories": [
+    "src",
+    "node_modules"
+  ],
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "css",
+    "scss",
+    "js",
+    "json",
+    "jsx"
+  ],
+  "testMatch": [
+    "**/*.spec.js"
+  ],
+  "transformIgnorePatterns": [
+    "/node_modules/(?!test-component).+\\.js$"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/"
+  ]
 }

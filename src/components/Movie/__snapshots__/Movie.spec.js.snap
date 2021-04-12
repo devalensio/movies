@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie renders Movie successfully 1`] = `
+<div
+  className="movie__wrapper"
+>
+  <div
+    className="movie__wrapper--header"
+  >
+    <img
+      alt="Movie Poster"
+      height="250px"
+      onClick={[Function]}
+      src="/images/not-found.png"
+      width="100%"
+    />
+    <h1 />
+  </div>
+  <p>
+    Type: 
+  </p>
+  <p>
+    Release Date: 
+  </p>
+</div>
+`;

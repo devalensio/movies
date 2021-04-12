@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Bar renders SearchBar successfully 1`] = `
+<form
+  className="search__bar"
+  onSubmit={[Function]}
+>
+  <div
+    className="search__bar--main"
+  >
+    <img
+      alt="search-icon"
+      height="16px"
+      src="/images/search.png"
+      width="16px"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Name of a movie"
+      type="text"
+    />
+  </div>
+  <button
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;

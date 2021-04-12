@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie Detail renders MovieDetail successfully 1`] = `
+<div
+  className="movie__detail"
+>
+  <div
+    className="movie__detail--header"
+  >
+    <div
+      className="header__icon"
+      onClick={[Function]}
+    >
+      <img
+        alt="search-icon"
+        height="16px"
+        src="/images/back-arrow.png"
+        width="16px"
+      />
+    </div>
+    <h2>
+      Movie Detail
+    </h2>
+  </div>
+  <div
+    className="movie__detail--body"
+  >
+    <img
+      alt="Movie Poster"
+    />
+    <h1 />
+  </div>
+  <p>
+    Type: 
+    -
+  </p>
+  <p>
+    Release Date: 
+    -
+  </p>
+  <p>
+    Genre: 
+    -
+  </p>
+  <p>
+    Language: 
+    -
+  </p>
+  <p>
+    Origin: 
+    -
+  </p>
+  <p>
+    Story: 
+    -
+  </p>
+</div>
+`;

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders Home successfully 1`] = `
+<div
+  className="home__wrapper"
+>
+  <h2>
+    Movie List
+  </h2>
+  <form
+    className="search__bar"
+    onSubmit={[Function]}
+  >
+    <div
+      className="search__bar--main"
+    >
+      <img
+        alt="search-icon"
+        height="16px"
+        src="/images/search.png"
+        width="16px"
+      />
+      <input
+        onChange={[Function]}
+        placeholder="Name of a movie"
+        type="text"
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+  <p>
+    Movies not found ...
+  </p>
+</div>
+`;
+
+exports[`Home renders the inner Counter 1`] = `
+<div
+  className="home__wrapper"
+>
+  <h2>
+    Movie List
+  </h2>
+  <form
+    className="search__bar"
+    onSubmit={[Function]}
+  >
+    <div
+      className="search__bar--main"
+    >
+      <img
+        alt="search-icon"
+        height="16px"
+        src="/images/search.png"
+        width="16px"
+      />
+      <input
+        onChange={[Function]}
+        placeholder="Name of a movie"
+        type="text"
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+  <p>
+    Movies not found ...
+  </p>
+</div>
+`;
